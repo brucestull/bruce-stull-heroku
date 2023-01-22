@@ -16,7 +16,7 @@
                     <img class="card-img-top" src="{% static project.image %}">
                     <div class="card-body">
                         <h5 class="card-title">{{ project.title }}</h5>
-                        <p class="card-text">{{ project.description | truncatewords:30 }}</p>
+                        <p class="card-text">{{ project.description | truncatewords:20 }}</p>
                         <a
                             href="{% url 'projects:project-detail' project.pk %}"
                             class="btn btn-primary"
