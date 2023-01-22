@@ -300,7 +300,7 @@ Temporary Items
 # !.vscode/tasks.json
 # !.vscode/launch.json
 # !.vscode/extensions.json
-# !.vscode/*.code-snippets
+!.vscode/*.code-snippets
 
 # Local History for Visual Studio Code
 .history/
