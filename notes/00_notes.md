@@ -97,29 +97,53 @@
               update.html
   ```
 
+## Creating a Couple `Project` Objects
+
+1. Start Django admin shell:
+
+    * `python manage.py shell`
+
+1. Create `Project` objects:
+
 ```python
+from projects.models import Project
+from accounts.models import CustomUser
+
+the_owner = CustomUser.objects.get(pk=1)
+
 p1 = Project(
 title="First Project",
 description="Just an image???",
 owner=the_owner,
-image="test_image_01.png",
+image="images/test_image_01.png",
 )
-```
 
-```python
+p1.save()
+
 p2 = Project(
 title="Second Project",
 description="Just an image???",
 owner=the_owner,
-image="test_image_02.png",
+image="images/test_image_02.png",
 )
-```
 
-```python
+p2.save()
+
 p3 = Project(
 title="Third Project",
 description="Just an image???",
 owner=the_owner,
-image="test_image_03.png",
+image="images/test_image_03.png",
 )
+
+p3.save()
 ```
+
+## `realpython.com` Image Location
+
+* `C:\Users\FlynntKnapp\Programming\realpython\rp-portfolio\projects\static\img\project1.png`
+* `rp-portfolio\projects\static\img\project2.png`
+
+## Resources
+
+* <https://rorydeken.github.io/Buckeye-Ipsum/>

@@ -21,7 +21,7 @@ class Project(models.Model):
         on_delete=models.CASCADE,
     )
     image = models.FilePathField(
-        "Project Image",
+        "Image Location",
         path="/img",
     )
 

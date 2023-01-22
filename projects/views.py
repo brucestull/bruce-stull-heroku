@@ -15,3 +15,15 @@ def projects(request):
         'projects': projects,
     }
     return render(request, 'projects/projects.html', context)
+
+def project(request, pk):
+    """
+    View for the `projects.Project` detail view.
+    """
+    project = Project.objects.get(pk=pk)
+    context = {
+        'the_site_name': THE_SITE_NAME,
+        'page_title': project.title,
+        'project': project,
+    }
+    return render(request, 'projects/project.html', context)

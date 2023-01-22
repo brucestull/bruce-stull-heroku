@@ -6,6 +6,9 @@
   * <http://localhost:8000/>
 * Projects:
   * <http://localhost:8000/projects/>
+  * <http://localhost:8000/projects/1/>
+  * <http://localhost:8000/projects/2/>
+  * <http://localhost:8000/projects/3/>
 * Blog:
   * <http://localhost:8000/blog/>
 * Create user:
