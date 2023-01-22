@@ -16,6 +16,13 @@
                 >
                 <code>bruce-stull</code> GitHub Repository
             </a>
+            <br>
+            <a href="{% url 'home' %}">Portfolio</a>
+            |
+            <a href={% url 'projects:index' %}>Projects</a>
+            |
+            <a href={% url 'blog:index' %}>Blog</a>
+            <br>
             {% if user.is_staff %}
                 {% include 'staff.html' %}
             {% endif %}

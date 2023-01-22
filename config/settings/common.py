@@ -35,6 +35,7 @@ INSTALLED_APPS = [
 
     'accounts.apps.UsersConfig',
     'projects.apps.ProjectsConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,4 +124,4 @@ LOGOUT_REDIRECT_URL = 'home'
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
 
-THE_SITE_NAME = 'Bruce Stull: Portfolio'
+THE_SITE_NAME = 'Bruce Stull'

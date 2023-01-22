@@ -1,5 +1,32 @@
 # Useful Commands and Links
 
+## Development server web links
+
+* Server Root:
+  * <http://localhost:8000/>
+* Projects:
+  * <http://localhost:8000/projects/>
+* Blog:
+  * <http://localhost:8000/blog/>
+* Create user:
+  * <http://localhost:8000/accounts/signup/>
+* Django Admin:
+  * <http://localhost:8000/admin/>
+* Django Admin Documentation:
+  * <http://localhost:8000/admin/doc/>
+  * <http://localhost:8000/admin/doc/tags/>
+  * <http://localhost:8000/admin/doc/filters/>
+  * <http://localhost:8000/admin/doc/models/>
+  * <http://localhost:8000/admin/doc/models/auth.user/>
+
+## Production deployment links
+
+* Dashboard:
+* Server Root:
+* Create user:
+* Django Admin:
+* Django Admin Documentation:
+
 ## Commands
 
 ### This Project
@@ -62,29 +89,6 @@
 ### Git
 
 * `git remote -v`
-
-## Production deployment links
-
-* Dashboard:
-* Server Root:
-* Create user:
-* Django Admin:
-* Django Admin Documentation:
-
-## Development server web links
-
-* Create user:
-  * <http://localhost:8000/accounts/signup/>
-* Server Root:
-  * <http://localhost:8000/>
-* Django Admin:
-  * <http://localhost:8000/admin/>
-* Django Admin Documentation:
-  * <http://localhost:8000/admin/doc/>
-  * <http://localhost:8000/admin/doc/tags/>
-  * <http://localhost:8000/admin/doc/filters/>
-  * <http://localhost:8000/admin/doc/models/>
-  * <http://localhost:8000/admin/doc/models/auth.user/>
 
 ## Repository Links
 

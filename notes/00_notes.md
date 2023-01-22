@@ -96,3 +96,30 @@
               signup.html
               update.html
   ```
+
+```python
+p1 = Project(
+title="First Project",
+description="Just an image???",
+owner=the_owner,
+image="test_image_01.png",
+)
+```
+
+```python
+p2 = Project(
+title="Second Project",
+description="Just an image???",
+owner=the_owner,
+image="test_image_02.png",
+)
+```
+
+```python
+p3 = Project(
+title="Third Project",
+description="Just an image???",
+owner=the_owner,
+image="test_image_03.png",
+)
+```
