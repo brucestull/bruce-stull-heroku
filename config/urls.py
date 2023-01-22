@@ -29,6 +29,13 @@ urlpatterns = [
         ),
         name='home',
     ),
+    path(
+        'temp-base/',   # http://localhost:8000/temp-base/
+        TemplateView.as_view(
+            template_name="base.html",
+        ),
+        name='temp-base',
+    ),
 
     path('admin/doc/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),

@@ -1,2 +1,1 @@
 # `bruce-stull` Porfolio Application
-
