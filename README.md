@@ -1,6 +1,17 @@
-# `bruce-stull` Porfolio Application
+# `bruce-stull` Porfolio Application Deployed on Heroku
+
+## Heroku Application Links
+
+* Application URL:
+  * <https://bruce-stull.herokuapp.com/>
 
 ## Interesting Concepts
+
+### Will try out Railway for deployment, after copying the repository to another repository (`bruce-stull-railway`)
+
+* [Django Tutorial Part 11: Deploying Django to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)
+  * <https://railway.app/dashboard>
+* <https://docs.railway.app/getting-started>
 
 ### Django Tests
 
