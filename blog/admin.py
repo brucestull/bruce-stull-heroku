@@ -26,8 +26,10 @@ class PostAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'name',
+        'date_created',
     )
     list_filter = (
         'name',
+        'date_created',
     )
   

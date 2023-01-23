@@ -22,7 +22,7 @@ class Project(models.Model):
     )
     image = models.FilePathField(
         "Image Location",
-        path="/img",
+        path="/images",
     )
 
     def __str__(self):
