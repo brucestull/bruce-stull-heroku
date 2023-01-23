@@ -1,8 +1,34 @@
 # Notes
 
-## Current Location
+## Interesting Concepts
 
-* <https://realpython.com/get-started-with-django-1/#conclusion>
+### Django Tests
+
+* Needed to add a `__init__.py` file to the 'tests' directories in order for the tests to run.
+* Django test snippets:
+  * Run all tests in all apps.
+    * `python manage.py test`
+
+### Production Deployment
+
+* `SECRET_KEY`:
+
+  ```python
+  import os
+
+  SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY',
+    'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag'
+  )
+  ```
+
+* `DEBUG`:
+
+  ```python
+  import os
+
+  DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+  ```
 
 ## Tutorial Links
 
@@ -22,12 +48,12 @@
 * `bruce-stull`
   * `accounts`
     * User account management
-  * `blog`
-    * Blog application
   * `config`
     * Django project configuration
-  * `portfolio`
-    * Portfolio application
+  * `blog`
+    * Blog application
+  * `projects`
+    * Projects application
   * `templates`
     * Django templates from DjangoCustomUserStarter
 
