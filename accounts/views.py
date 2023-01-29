@@ -1,5 +1,6 @@
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.detail import DetailView
 from django.contrib.auth.views import LoginView
 
 from accounts.forms import CustomUserCreationForm, CustomUserChangeForm
@@ -45,7 +46,7 @@ class UserUpdateView(UpdateView):
     model = CustomUser
     form_class = CustomUserChangeForm
     success_url = reverse_lazy('login')
-    template_name ='registration/update.html'
+    template_name ='registration/profile_update.html'
 
     def get_context_data(self, **kwargs):
         """
@@ -53,4 +54,21 @@ class UserUpdateView(UpdateView):
         """
         context = super().get_context_data(**kwargs)
         context['the_site_name'] = THE_SITE_NAME
+        return context
+
+
+class UserDetailView(DetailView):
+    """
+    View for user to view their account.
+    """
+    model = CustomUser
+    template_name = 'registration/profile.html'
+
+    def get_context_data(self, **kwargs):
+        """
+        Add the site name to the context.
+        """
+        context = super().get_context_data(**kwargs)
+        context['the_site_name'] = THE_SITE_NAME
+        context['page_title'] = 'User Detail'
         return context
