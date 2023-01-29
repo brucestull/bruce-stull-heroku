@@ -46,7 +46,7 @@ class UserUpdateView(UpdateView):
     model = CustomUser
     form_class = CustomUserChangeForm
     success_url = reverse_lazy('login')
-    template_name ='registration/profile_update.html'
+    template_name ='accounts/profile_update.html'
 
     def get_context_data(self, **kwargs):
         """
@@ -62,7 +62,7 @@ class UserDetailView(DetailView):
     View for user to view their account.
     """
     model = CustomUser
-    template_name = 'registration/profile.html'
+    template_name = 'accounts/profile.html'
 
     def get_context_data(self, **kwargs):
         """

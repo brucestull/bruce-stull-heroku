@@ -11,6 +11,8 @@
     <li class="nav-item active">
         <a class="nav-link" href="{% url 'blog:index' %}">Blog</a>
     </li>
+
+    {% if user.is_authenticated %}
     <li class="nav-item active">
         <a class="nav-link" href="{% url 'profile' user.id %}">Profile</a>
     </li>
@@ -18,6 +20,12 @@
     <li class="nav-item active">
         <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
     </li>
+    {% else %}
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">Log In</a>
+    </li>
+    {% endif %}
+
 {% endblock the_navbar %}
 
 {% block content %}
