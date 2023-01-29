@@ -2,6 +2,19 @@
 
 {% block title %}{{ the_site_name }} - Log In{% endblock %}
 
+{% block the_navbar %}
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'projects:index' %}">Projects</a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'blog:index' %}">Blog</a>
+    </li>
+    <li class="dropdown-divider"></li>
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+    </li>
+{% endblock the_navbar %}
+
 {% block content %}
     <h2>Log In</h2>
     <form method="post">
