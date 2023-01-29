@@ -22,31 +22,37 @@
         
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        {% if user.is_authenticated %}
-                        <li class="nav-item active">
-                            Greetings, {{ user.username | capfirst }}!
-                        </li>
-                        {% endif %}
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{% url 'projects:index' %}">Projects</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{% url 'blog:index' %}">Blog</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a
-                                class="nav-link"
-                                href="https://github.com/brucestull/bruce-stull"
-                                target="_blank"
-                                >
-                                <code>bruce-stull</code> GitHub Repository
-                            </a>
-                        </li>
-                        {% if user.is_staff %}
-                            {% include 'staff.html' %}
-                        {% endif %}
 
-                        {% include 'user.html' %}
+                        {% block the_navbar %}
+
+                            {% if user.is_authenticated %}
+                            <li class="nav-item active">
+                                Greetings, {{ user.username | capfirst }}!
+                            </li>
+                            {% endif %}
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'projects:index' %}">Projects</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'blog:index' %}">Blog</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a
+                                    class="nav-link"
+                                    href="https://github.com/brucestull/bruce-stull-heroku"
+                                    target="_blank"
+                                    >
+                                    <code>bruce-stull</code> GitHub Repository
+                                </a>
+                            </li>
+                            {% if user.is_staff %}
+                                {% include 'staff.html' %}
+                            {% endif %}
+
+                            {% include 'user.html' %}
+
+                        {% endblock the_navbar %}
+
                     </ul>
                 </div>
             </div>

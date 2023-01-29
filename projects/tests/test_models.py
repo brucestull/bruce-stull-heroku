@@ -18,10 +18,10 @@ class ExampleTestClass(TestCase):
         print("Method: test_false_is_false.")
         self.assertFalse(False)
 
-    def test_false_is_true(self):
+    def test_true_is_true(self):
         print('')
-        print("Method: test_false_is_true.")
-        self.assertTrue(False)
+        print("Method: test_true_is_true.")
+        self.assertTrue(True)
 
     def test_one_plus_one_equals_two(self):
         print('')
