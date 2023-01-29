@@ -10,3 +10,6 @@
 
 1. Add dividers:
 ![image](https://user-images.githubusercontent.com/47562501/215344707-d63dc5fc-cccd-4d02-95dd-7ebaa4f3336b.png)
+
+1. Add some more user management pages:
+![image](https://user-images.githubusercontent.com/47562501/215353757-940255b8-c8db-4fb2-aca5-ac31c046a7a6.png)
