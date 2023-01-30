@@ -28,6 +28,8 @@ urlpatterns = [
         name='temp-base',
     ),
 
+    path('oauth/', include('social_django.urls')),
+    
     path('admin/doc/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),
     

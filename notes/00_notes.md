@@ -1,5 +1,9 @@
 # Notes
 
+## Current Location in Documentation
+
+* <https://realpython.com/django-user-management/#log-in-with-github>
+
 ## Tutorial Links
 
 * [Get Started With Django Part 1: Build a Portfolio App](https://realpython.com/get-started-with-django-1/)
@@ -33,7 +37,7 @@
 
 ## Password Reset Notes
 
-* We already have another method to reset pawsswords, so we'll just use that one for now.
+* We already have another method to reset passwords, so we'll just use that one for now.
   * <https://realpython.com/django-user-management/#send-password-reset-links>
   * `python -m smtpd -n -c DebuggingServer localhost:1025`
 * <https://realpython.com/django-user-management/#change-email-templates>
@@ -47,6 +51,14 @@
   * `SMTP_PORT`
   * `SMTP_USERNAME`
   * `SMTP_PASSWORD`
+
+## GitHub OAuth Notes
+
+* Create the GitHub OAuth application
+  * <https://github.com/settings/applications/new>
+    INSERT_IMAGE_HERE
+
+* `https://github.com/login/oauth/authorize?client_id=None&redirect_uri=http://localhost:8000/accounts/oauth/complete/github/&state=lrgKWJgVwjBpvyfcNAEuZrnVYFGIVnHm&response_type=code`
 
 ## Directory Structure
 
@@ -167,3 +179,5 @@ p3.save()
 ## Resources
 
 * <https://rorydeken.github.io/Buckeye-Ipsum/>
+* <https://github.com/python-social-auth/social-app-django>
+  * <https://python-social-auth.readthedocs.io/en/latest/configuration/django.html>

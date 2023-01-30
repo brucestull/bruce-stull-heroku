@@ -9,6 +9,8 @@ class CustomUserCreationForm(UserCreationForm):
         fields = (
             'username',
             'email',
+            # Don't need to provide first_name and last_name at registration.
+            # Can add these fields later, if preferred.
             # 'first_name',
             # 'last_name',
         )

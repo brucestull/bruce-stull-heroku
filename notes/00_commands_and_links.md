@@ -49,6 +49,7 @@
 * `pipenv install django==4.0`
 * `pipenv install django==4.1`
 * `pipenv install docutils==0.19`
+* `pipenv install social-auth-app-django`
 * `pipenv shell`
 * `exit`
   * Exit the current `pipenv` virtual environment.

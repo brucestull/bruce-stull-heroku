@@ -27,6 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
 
+    'social_django',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -63,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -118,10 +122,20 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Custom User Model:
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
+# User Login/Logout Redirects and settings:
 LOGIN_REDIRECT_URL = 'projects:index'
 LOGOUT_REDIRECT_URL = 'projects:index'
+
+# Social Auth Settings:
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.github.GithubOAuth2',
+]
+SOCIAL_AUTH_GITHUB_KEY = os.environ.get("SOCIAL_AUTH_GITHUB_KEY")
+SOCIAL_AUTH_GITHUB_SECRET = os.environ.get("SOCIAL_AUTH_GITHUB_SECRET")
 
 # Email settings for password reset:
 # EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
