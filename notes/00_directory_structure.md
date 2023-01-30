@@ -99,7 +99,7 @@
     |           password_reset_done.html
     |           password_reset_form.html
     |           signup.html
-    |           update.html
+    |           profile_update.html
     |
     \---test_images
             test_image_01.png

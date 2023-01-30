@@ -6,11 +6,36 @@
     {{ post.title }}
 {% endblock title %}
 
+{% block the_navbar %}
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'projects:index' %}">Projects</a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'blog:index' %}">Blog</a>
+    </li>
+
+    {% if user.is_authenticated %}
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'profile' user.id %}">Profile</a>
+    </li>
+    <li class="dropdown-divider"></li>
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+    </li>
+    {% else %}
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">Log In</a>
+    </li>
+    {% endif %}
+
+{% endblock the_navbar %}
+
 {% block content %}
     <div class="col-md-8 offset-md-2">
         <h1>{{ post.title }}</h1>
         <small>
             {{ post.date_posted.date }} |&nbsp;
+            {{ post.author }} |&nbsp;
             Categories:&nbsp;
             {% for category in post.categories.all %}
             <a href="{% url 'blog:blog-category' category.name %}">

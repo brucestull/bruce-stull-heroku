@@ -10,12 +10,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <title>{% block title %}base.html{% endblock title %}</title>
+        <style>
+            label, input {
+                display: block;
+            }
+            span.helptext {
+                display: none;
+            }
+        </style>
     </head>
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'projects:index' %}">Bruce Stull Portfolio</a>
+                <a class="navbar-brand" href="{% url 'projects:index' %}">Bruce Stull - My Tagline</a>
+                <span class="ml-auto">Greetings, {{ user.username | default:'Guest' | capfirst }}! &nbsp;</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -24,35 +33,13 @@
                     <ul class="navbar-nav mr-auto">
 
                         {% block the_navbar %}
-
-                            {% if user.is_authenticated %}
-                            <li class="nav-item active">
-                                Greetings, {{ user.username | capfirst }}!
-                            </li>
-                            {% endif %}
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'projects:index' %}">Projects</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'blog:index' %}">Blog</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a
-                                    class="nav-link"
-                                    href="https://github.com/brucestull/bruce-stull-heroku"
-                                    target="_blank"
-                                    >
-                                    <code>bruce-stull</code> GitHub Repository
-                                </a>
-                            </li>
-                            {% if user.is_staff %}
-                                {% include 'staff.html' %}
-                            {% endif %}
-
-                            {% include 'user.html' %}
-
                         {% endblock the_navbar %}
 
+                        {% if user.is_staff %}
+                            <li class="dropdown-divider"></li>
+                            {% include 'staff.html' %}
+                        {% endif %}
+                        
                     </ul>
                 </div>
             </div>

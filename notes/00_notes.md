@@ -94,7 +94,7 @@
               password_reset_done.html
               password_reset_form.html
               signup.html
-              update.html
+              profile_update.html
   ```
 
 ## Creating a Couple `Project` Objects
