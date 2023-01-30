@@ -15,6 +15,9 @@ class Category(models.Model):
         auto_now_add=True,
     )
 
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     def __str__(self):
         return self.name
 
