@@ -27,13 +27,33 @@
   * `templates`
     * Django templates from DjangoCustomUserStarter
 
+## RealPython - MyApp Viewname Mappings
+
+* `dashboard` - `projects:index`
+
+## Password Reset Notes
+
+* We already have another method to reset pawsswords, so we'll just use that one for now.
+  * <https://realpython.com/django-user-management/#send-password-reset-links>
+  * `python -m smtpd -n -c DebuggingServer localhost:1025`
+* <https://realpython.com/django-user-management/#change-email-templates>
+
+### Send Password Reset Links to Real Email Addresses
+
+* <https://realpython.com/django-user-management/#send-emails-to-the-outside-world>
+
+* Environment Variables
+  * `SMTP_HOSTNAME`
+  * `SMTP_PORT`
+  * `SMTP_USERNAME`
+  * `SMTP_PASSWORD`
+
 ## Directory Structure
 
   ```bash
   C:\USERS\FLYNNTKNAPP\PROGRAMMING\BRUCE-STULL
   |   .gitignore
   |   db.sqlite3
-  |   LICENSE
   |   manage.py
   |   Pipfile
   |   Pipfile.lock
