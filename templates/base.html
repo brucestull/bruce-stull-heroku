@@ -23,7 +23,8 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'projects:index' %}">Bruce Stull Portfolio</a>
+                <a class="navbar-brand" href="{% url 'projects:index' %}">Bruce Stull - My Tagline</a>
+                <span class="ml-auto">Greetings, {{ user.username | default:'Guest' | capfirst }}! &nbsp;</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -32,38 +33,13 @@
                     <ul class="navbar-nav mr-auto">
 
                         {% block the_navbar %}
-
-                            {% if user.is_authenticated %}
-                            <li class="nav-item active">
-                                Greetings, {{ user.username | capfirst }}!
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'profile' user.id %}">Profile</a>
-                            </li>
-                            {% endif %}
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'projects:index' %}">Projects</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'blog:index' %}">Blog</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a
-                                    class="nav-link"
-                                    href="https://github.com/brucestull/bruce-stull-heroku"
-                                    target="_blank"
-                                    >
-                                    <code>bruce-stull</code> GitHub Repository
-                                </a>
-                            </li>
-                            {% if user.is_staff %}
-                                {% include 'staff.html' %}
-                            {% endif %}
-
-                            {% include 'user.html' %}
-
                         {% endblock the_navbar %}
 
+                        {% if user.is_staff %}
+                            <li class="dropdown-divider"></li>
+                            {% include 'staff.html' %}
+                        {% endif %}
+                        
                     </ul>
                 </div>
             </div>
