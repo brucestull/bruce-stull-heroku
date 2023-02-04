@@ -137,15 +137,24 @@ AUTHENTICATION_BACKENDS = [
 SOCIAL_AUTH_GITHUB_KEY = os.environ.get("SOCIAL_AUTH_GITHUB_KEY")
 SOCIAL_AUTH_GITHUB_SECRET = os.environ.get("SOCIAL_AUTH_GITHUB_SECRET")
 
+########################################################################
 # Email settings for password reset:
-# EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-# EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
+###############################
 
-EMAIL_HOST = os.environ.get('SMTP_HOSTNAME')
-EMAIL_PORT = os.environ.get('SMTP_PORT')
-EMAIL_HOST_USER = os.environ.get('SMTP_USERNAME')
-EMAIL_HOST_PASSWORD = os.environ.get('SMTP_PASSWORD')
-EMAIL_USE_TLS = True
+###############################
+# Using 'sent_emails' folder to store emails:
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
+###############################
+
+###############################
+# Using SMTP server:
+# EMAIL_HOST = os.environ.get('SMTP_HOSTNAME')
+# EMAIL_PORT = os.environ.get('SMTP_PORT')
+# EMAIL_HOST_USER = os.environ.get('SMTP_USERNAME')
+# EMAIL_HOST_PASSWORD = os.environ.get('SMTP_PASSWORD')
+# EMAIL_USE_TLS = True
+########################################################################
 
 # Website Name:
 THE_SITE_NAME = 'Bruce Stull'

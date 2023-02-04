@@ -2,7 +2,7 @@
 
 ## Current Location in Documentation
 
-* <https://realpython.com/django-user-management/#log-in-with-github>
+* <https://realpython.com/django-view-authorization/>
 
 ## Tutorial Links
 
