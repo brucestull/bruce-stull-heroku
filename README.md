@@ -19,6 +19,8 @@
 
 * Error:
   * `ImportError: 'tests' module incorrectly imported from 'C:\\Users\\FlynntKnapp\\Programming\\bruce-stull-heroku\\accounts\\tests'. Expected 'C:\\Users\\FlynntKnapp\\Programming\\bruce-stull-heroku\\accounts'. Is this module globally installed?`
+    * Resource:
+      * [What does "'tests' module incorrectly imported" mean? - stackoverflow.com](https://stackoverflow.com/a/37525251)
     * Can only have either a `tests` directory or a `tests.py` file.
       * Initial directory structure:
 
