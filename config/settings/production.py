@@ -31,10 +31,10 @@ DATABASES = {
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-# Create a specific `SECRET_KEY` for production and use it in production only.
-SECRET_KEY = os.environ.get('SECRET_KEY')
+# Create a specific `DJANGO_SECRET_KEY` for production and use it in production only.
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
-# To create a new `SECRET_KEY`:
+# To create a new `DJANGO_SECRET_KEY`:
 """
     python .\manage.py shell
     from django.core.management.utils import get_random_secret_key
