@@ -1,29 +1,29 @@
 from django.test import TestCase
 
 
-class ExampleTestClass(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        print('')
-        print("setUpTestData: Run once to set up non-modified data for all class methods.")
-        pass
+# class ExampleTestClass(TestCase):
+#     @classmethod
+#     def setUpTestData(cls):
+#         print('')
+#         print("setUpTestData: Run once to set up non-modified data for all class methods.")
+#         pass
 
-    def setUp(self):
-        print('')
-        print("setUp: Run once for every test method to setup clean data.")
-        pass
+#     def setUp(self):
+#         print('')
+#         print("setUp: Run once for every test method to setup clean data.")
+#         pass
 
-    def test_false_is_false(self):
-        print('')
-        print("Method: test_false_is_false.")
-        self.assertFalse(False)
+#     def test_false_is_false(self):
+#         print('')
+#         print("Method: test_false_is_false.")
+#         self.assertFalse(False)
 
-    def test_true_is_true(self):
-        print('')
-        print("Method: test_true_is_true.")
-        self.assertTrue(True)
+#     def test_true_is_true(self):
+#         print('')
+#         print("Method: test_true_is_true.")
+#         self.assertTrue(True)
 
-    def test_one_plus_one_equals_two(self):
-        print('')
-        print("Method: test_one_plus_one_equals_two.")
-        self.assertEqual(1 + 1, 2)
+#     def test_one_plus_one_equals_two(self):
+#         print('')
+#         print("Method: test_one_plus_one_equals_two.")
+#         self.assertEqual(1 + 1, 2)
