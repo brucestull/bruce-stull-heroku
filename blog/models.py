@@ -10,9 +10,11 @@ class Category(models.Model):
     """
     name = models.CharField(
         max_length=20,
+        verbose_name='Word to describe the Category',
     )
     date_created = models.DateTimeField(
         auto_now_add=True,
+        verbose_name='Date the Category was created',
     )
 
     class Meta:
@@ -28,14 +30,19 @@ class Post(models.Model):
     """
     title = models.CharField(
         max_length=100,
+        verbose_name='Title of the Post',
     )
-    body = models.TextField()
+    body = models.TextField(
+        verbose_name='Body of the Post',
+    )
     date_posted = models.DateTimeField(
         auto_now_add=True,
+        verbose_name='Date the Post was posted',
     )
     author = models.ForeignKey(
         AUTH_USER_MODEL,
         on_delete=models.CASCADE,
+        verbose_name='Author of the Post',
     )
     categories = models.ManyToManyField(
         Category,
