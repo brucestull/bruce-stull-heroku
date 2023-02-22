@@ -1,5 +1,4 @@
 from django.test import TestCase
-from django.db.models import CASCADE as ON_DELETE_CASCADE
 
 from blog.models import Category, Post, Comment
 from accounts.models import CustomUser
@@ -146,19 +145,6 @@ class PostModelTest(TestCase):
         post = Post.objects.get(id=1)
         field_label = post._meta.get_field('author').verbose_name
         self.assertEqual(field_label, 'Author of the Post')
-
-    # This doesn't show up as part of a post's meta data.
-    # def test_author_on_delete(self):
-    #     """
-    #     `author` on_delete should be 'CASCADE'.
-    #     """
-    #     post = Post.objects.get(id=1)
-    #     author = post._meta.get_field('author')
-
-    #     # on_delete = post._meta.get_field('author').on_delete
-    #     # self.assertEqual(on_delete, ON_DELETE_CASCADE)
-
-    #     self.assertTrue(False)
 
     def test_categories_label(self):
         """
